@@ -1,0 +1,14 @@
+name: Manually triggered workflow
+on:
+  workflow_dispatch:
+    inputs:
+      project_id:
+        description: 'pass the project_id'
+        required: true
+
+jobs:
+  test_manual_workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Hello ${{ github.event.inputs.project_id }}!"

@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "Hello ${{ github.event.inputs.project_id }}!"
+          echo "This is my ${{ github.event.inputs.project_id }}"
